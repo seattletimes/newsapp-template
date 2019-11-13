@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title><%= json.project.title %></title>
+<title><%= project.title %></title>
 
 <!-- Favicon -->
 <link rel="shortcut icon" href="https://apps-production.s3.amazonaws.com/static/images/favicon.ico" type="image/x-icon">
@@ -24,38 +24,6 @@
 <meta property="og:description" content="<%= project.description %>">
 <meta property="fb:app_id" content="225286600856790"/>
 
-<!-- Google structured data -->
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "NewsArticle",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "<%= project.url %>"
-  },
-  "headline": "<%= project.title %>",
-  "image": {
-    "@type": "ImageObject",
-    "url": "<%= project.url + project.image %>"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "Seattle Times Staff"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "The Seattle Times",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "<%= project.url %>assets/logo.jpg",
-      "width": 1000,
-      "height": 147
-    }
-  },
-  "description": "<%= project.description %>"
-}
-</script>
-
 <% if (project.standout) { %>
 <meta name="standout" content="<%= project.url %>">
 <% } %>
@@ -67,18 +35,6 @@
 
 <!-- Safari, you're the worst -->
 <meta name='format-detection' content='telephone=no'>
-
-<!-- start ad set-up -->
-<script>
-window.googletag = {
-  cmd: [],
-  seatimes: {
-    tags: <%= JSON.stringify(project.tags || []) %>,
-    unit: "/81279359/seattletimes.com"
-  }
-};
-</script>
-<!-- end ad set-up -->
 
 <!-- typekit fonts -->
 <script>
