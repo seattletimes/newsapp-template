@@ -1,11 +1,11 @@
 // pageId is a unique identifier for the current project
 // do not call this function multiple times
 var walled = false;
- 
-var paywall = function paywall(pageID) {
+
+var paywall = function(pageID) {
   if (walled) return;
   walled = true;
- 
+
   window.SEATIMESCO = window.SEATIMESCO || {};
   window.SEATIMESCO.paywall = {
     contentMetered: true,
@@ -17,11 +17,12 @@ var paywall = function paywall(pageID) {
     post_id: pageID,
     sections_all: "projects"
   };
+  
   var paywallScript = document.createElement("script");
   paywallScript.async = true;
   paywallScript.defer = true;
   paywallScript.src = "https://www.seattletimes.com/wp-content/plugins/st-user-messaging/dist/st-user-messaging-paywall-bundle.js";
   document.head.appendChild(paywallScript);
-};
- 
-var _$paywall_10 = paywall;
+}
+
+module.exports = paywall;
