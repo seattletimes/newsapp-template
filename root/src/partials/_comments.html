@@ -3,8 +3,8 @@
   window.SEATIMESCO = window.SEATIMESCO || {};
   window.SEATIMESCO.comments = window.SEATIMESCO.comments || {};
   window.SEATIMESCO.comments.enabled = 1;
-  window.SEATIMESCO.comments.postID = 'stp-12345678';
-  window.SEATIMESCO.comments.assetURL = 'https://projects-staging.seattletimes.com/international-fireball/';
+  window.SEATIMESCO.comments.postID = 'stp-<%= json.project.post_id %>';
+  window.SEATIMESCO.comments.assetURL = '<%= json.project.url %>';
   window.SEATIMESCO.comments.ssoEnvironment = 'secure.';
   window.SEATIMESCO.comments.coralURL = 'https://seattletimes.talk.coralproject.net/';
   window.SEATIMESCO.singleSignOn = window.SEATIMESCO.singleSignOn || {};
@@ -20,7 +20,7 @@
   <div id="coral_talk_stream"></div>
   <p class="u-sans font-small mb-5">The opinions expressed in reader comments are those of the author only, and do not reflect the opinions of The Seattle Times.</p>
 </div>
-<script type="text/javascript" src="https://talk-seattletimes.global.ssl.fastly.net/static/embed/count.js?id=stp-12141226"></script>
+<script type="text/javascript" src="https://talk-seattletimes.global.ssl.fastly.net/static/embed/count.js?id=stp-<%= json.project.post_id %>"></script>
 <script type="text/javascript" src="https://talk-seattletimes.global.ssl.fastly.net/static/embed.js"></script>
 <script type="text/javascript" src="https://www.seattletimes.com/wp-content/plugins/st-coral-talk/dist/st-coraltalk-bundle.js"></script>
 <!-- end comment block -->
