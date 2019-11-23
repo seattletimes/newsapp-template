@@ -18,7 +18,7 @@
     "chalk": "^1.0.0",
     "commonmark": "^0.24.0",
     "component-responsive-frame": "^1.0.6",
-    "csv": "^0.4.2",
+    "csv": "^5.3.0",
     "dot": "^1.1.2",
     "exorcist": "^0.4.0",
     "googleapis": "^45.0.0",
