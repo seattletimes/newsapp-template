@@ -1,0 +1,8 @@
+<section class="thin-div">
+	<div class="center">Credits</div>
+</section>
+<section class="credits">
+	<% json.data.credits.forEach(function(credit) { %>
+		<p class="credit"><strong><%= credit.role %>: </strong><%= credit.name %></p>
+	<% }); %>
+</section>
