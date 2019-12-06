@@ -1,0 +1,32 @@
+<% if (type === "ifund") {
+	hed = "You can support local watchdog journalism"
+	body = "<span>Make a tax-deductible donation to</span> <span>The Seattle Times Investigative Journalism Fund.</span>"
+	button = "Donate"
+	link = "https://company.seattletimes.com/investigativefund/"
+} else if (type === "subscribe") {
+	hed = "Find this story valuable?"
+	body = "Support independent journalism at The Seattle Times by subscribing."
+	button = "Subscribe"
+	link = "https://www.seattletimes.com/subscribe/signup/?icn=promo-project&ici=subscribe"
+} else if (type === "morning_brief") {
+	hed = "Sign up for Morning Brief"
+	body = "Delivered weekday mornings, this email newsletter gives you a quick overview of need-to-know news and conversation starters."
+	button = "Sign up"
+	link = "https://www.seattletimes.com/newsletters/morning-brief/"
+} else if (type === "evening_brief") {
+	hed = "Sign up for Evening Brief"
+	body = "Delivered weeknights, this email newsletter recaps the top stories and features as you wind down your day."
+	button = "Sign up"
+	link = "https://www.seattletimes.com/newsletters/evening-brief/"
+} else {
+	hed = ""
+	body = ""
+	button = ""
+	link = ""
+} %>
+
+<section class="marketing marketing--<%= placement %>">
+	<h3 class="marketing__text marketing__hed"><%= hed %></h3>
+	<p class="marketing__text marketing__body"><%= body %></p>
+	<a class="marketing__button" href="<%= link %>"><%= button %></a>
+</section>

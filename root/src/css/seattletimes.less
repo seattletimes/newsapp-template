@@ -91,33 +91,43 @@ h4 {
 
 
 //common style elements
-
 .byline {
+  font-size: 19px;
+  margin-bottom: 0;
+}
+.staff-position {
+  font-style: italic;
+  font-size: 15px;
+  margin-top: 0;
+}
+.publish-date {
+  font-size: 16px;
+  font-family: @df-sans;
+  color: @df-middle-gray;
+}
+.graphic-hed {
+  font-family: @df-sans;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+.graphic-chatter {
+  font-family: @df-sans;
   font-size: 18px;
-  margin: 24px auto;
-
-  @media @tablet {
-    padding: 0 16px;
-    padding-top: 40px;
-
-  }
-
-  @media @mobile {
-    padding: 0 16px;
-    padding-top: 40px;
-
-  }
-
-  .staff {
-    font-style: italic;
-    font-size: 16px;
-  }
-
-  .date {
-    font-size: 16px;
-    font-family: @df-sans;
-    color: @df-dark-gray;
-  }
+  font-weight: normal;
+  text-align: center;
+}
+.data-source, .art-credit, .caption {
+  color: @df-middle-gray;
+  font-family: @df-sans;
+  font-size: 14px;
+}
+.data-source {
+  font-style: italic;
+  float: left;
+}
+.art-credit {
+  float: right;
 }
 
 //header and menu
@@ -195,49 +205,53 @@ nav.main-nav {
   }
 }
 
-.subscribe-box {
-  padding: 0;
-
-  h2 {
-    margin: 0;
-  }
-
-  img {
-    display: inline-block;
-    padding-right: 10px;
-    height: 24px;
-
-    @media @mobile {
-      display: block;
-      margin: 24px auto;
-      padding-right: 0;
+.marketing {
+  font-family: @df-sans;
+  margin: 20px 5px;
+  padding: 10px;
+  text-align: center;
+  width: ~"calc(100% - 10px)";
+}
+.marketing--footer {
+  border: 1px solid @df-light-gray;
+  max-width: 630px;
+  @media (min-width: 640px) {
+    margin: 20px auto;
+    span {
+      white-space: pre;
     }
   }
-
-  .button-box {
-    padding-top: 10px;
-    .display-flex();
-    .justify-content(center);
-    .align-items(center);
-
-    @media @mobile {
-      display: block;
-      text-align: center;
-    }
+}
+.marketing--sidebar {
+  border-top: 1px solid @df-light-gray;
+  border-bottom: 1px solid @df-light-gray;
+  max-width: 350px;
+  @media (max-width: 500px) {
+    margin: auto;
   }
-
-  .subscribe-button {
-    display: inline-block;
-    background: @df-blue;
-    padding: 12px 15px 10px 15px;
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    letter-spacing: .08em;
-
-    &:hover {
-      background: @df-light-gray;
-    }
+}
+.marketing__text {
+  margin: 5px auto;
+}
+.marketing__body {
+  font-size: 18px;
+  line-height: 21px;
+}
+.marketing__button {
+  background: @df-blue;
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  font-size: 19px;
+  font-weight: bold;
+  margin-top: 3px;
+  padding: 5px 20px;
+  &:hover {
+    color: #fff;
+    background: @df-navy;
+  }
+  &:visited {
+    color: #fff;
   }
 }
 
@@ -308,7 +322,7 @@ nav.main-nav {
   }
 }
 
-.credits {
+.project-credits {
   padding-top: 10px;
   max-width: 900px;
   margin: 10px auto;
@@ -318,8 +332,7 @@ nav.main-nav {
     margin-bottom: 35px;
   }
 }
-
-.credit {
+.project-credit {
   flex-basis: 50%;
   font-family: @df-sans;
   font-size: 17px;
