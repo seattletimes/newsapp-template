@@ -151,18 +151,31 @@ nav.main-nav {
   }
 
   .logo {
-    display: block;
+    display: inline-block;
     vertical-align: middle;
-
+    width: 160px;
     img {
-      // width: 310px;
       height: 24px;
       max-height: 100%;
-
       @media @mobile {
         height: 18px;
       }
     }
+  }
+}
+
+.share-bar {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  vertical-align: middle;
+}
+.share-icon {
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 30px;
+  &:hover .changes-color {
+    fill: @df-off-black;
   }
 }
 
