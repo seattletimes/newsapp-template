@@ -124,10 +124,14 @@ h4 {
 }
 .data-source {
   font-style: italic;
-  float: left;
+  @media @tablet-up {
+    float: left;
+  }
 }
 .art-credit {
-  float: right;
+  @media @tablet-up {
+    float: right;
+  }
 }
 
 //header and menu
