@@ -105,15 +105,9 @@ our ``index.html`` file to output this as an HTML table::
         <% }); %>
     </table>
 
-In addition to on-disk data, you can set the template to import data
-from Google Sheets. This is a great option for collaborating with other
-newsroom staff, who may find Google Drive easier than Excel (especially
-when it comes to sharing files). To configure your project for import,
-open the ``project.json`` file and add your workbook key to the
-``sheets`` array found there. You'll also need to use the "Publish to
-Web" menu item in the Sheets UI (under file) to open up API access. Once
-both of those conditions are met, running ``grunt sheets`` will download
-the data from Google and cache it as JSON (one file per worksheet). As
+In addition to on-disk data, you can set the template to import data from Google Sheets. This is a great option for collaborating with other newsroom staff, who may find Google Drive easier than Excel (especially when it comes to sharing files). The first time you do this, you'll need to run ``grunt google-auth`` to create a local Google OAuth token before you can talk to the API. 
+
+To configure a project for import, open the ``project.json`` file and add your workbook key to the ``sheets`` array found there. Running ``grunt sheets`` will download the data from Google and cache it as JSON (one file per worksheet). As
 with CSV, the data will be stored as an array unless one of your columns
 is named "key," in which case it'll be stored as a hash table.
 
