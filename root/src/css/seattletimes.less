@@ -27,14 +27,13 @@ body {
 
 main {
   display: block;
-
-  &.interactive {
-    padding: 20px 10px;
-    margin: 20px auto;
-    border-top: 1px solid @df-light-gray;
-    border-bottom: 1px solid @df-light-gray;
-    font-family: @df-sans;
-  }
+}
+.interactive {
+  padding: 10px;
+  margin: 20px auto;
+  border-top: 1px solid @df-light-gray;
+  border-bottom: 1px solid @df-light-gray;
+  font-family: @df-sans;
 }
 
 a {
@@ -117,6 +116,14 @@ h4 {
   font-weight: normal;
   text-align: center;
 }
+.source-container {
+  margin-top: 10px;
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
 .data-source, .art-credit, .caption {
   color: @df-middle-gray;
   font-family: @df-sans;
@@ -135,7 +142,7 @@ h4 {
 }
 
 //header and menu
-nav.main-nav {
+.main-nav {
   background: white;
   border-bottom: 1px solid @df-light-gray;
   box-shadow: 0 2px 7px rgba(0, 0, 0, .1);
