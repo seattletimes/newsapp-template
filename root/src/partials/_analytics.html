@@ -20,23 +20,21 @@
 <!-- Chartbeat bottom -->
 <script>
 var _sf_async_config={
-  uid:22565,
-  domain:"seattletimes.com",
-  useCanonical: "true",
-  sections: "",
-  authors: "By Seattle Times staff"
+ uid:22565,
+ domain:"seattletimes.com",
+ useCanonical: "true",
+ sections: "",
+ authors: "By Seattle Times staff"
 };
-(function(){
-  function loadChartbeat() {
-    window._sf_endpt=(new Date()).getTime();
-    var e = document.createElement('script');
-    e.setAttribute('src',
-(("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") + "js/chartbeat.js");
-    document.body.appendChild(e);
-  }
-  var oldonload = window.onload;
-  window.onload = (typeof window.onload != 'function') ? loadChartbeat : function() { oldonload(); loadChartbeat(); };
-})();
+function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = '//static.chartbeat.com/js/chartbeat.js';
+           n.parentNode.insertBefore(e, n);
+ }
+loadChartbeat();
 </script>
 
 <!-- Comscore pixel -->

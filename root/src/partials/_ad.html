@@ -1,59 +1,18 @@
-<% /* "You must include the type, and optionally an ID, to load ads" */ %>
-<div class="pending ad" id="<%= typeof id != "undefined" ? id : "" %>" data-type="<%= type %>" aria-hidden="true">
-  <script>
-(function() {
-  var scripts = document.getElementsByTagName("script");
-  var here = scripts[scripts.length - 1];
-  var div = here.parentElement;
-  var id = div.id;
-  if (!id) {
-    //generate an ID if none exists
-    id = div.id = "dfp-ad-" + scripts.length;
-  }
-  var type = <%= JSON.stringify(type) %>;
-  var tag = window.googletag;
 
-  tag.cmd.push(function() {
+<!-- Add these scripts to your page
+<script src="https://seattle-times.zeustechnology.com/main.js" async></script>
+<script src="https://www.seattletimes.com/wp-content/plugins/st-advertising/dist/st-projects-bundle.js" async></script> -->
 
-    var timeout = null;
 
-    var intersectionCheck = function() {
-      var bounds = div.getBoundingClientRect();
-      if (bounds.top < 0 || bounds.top > window.innerHeight) return false;
-
-      var options = tag.seatimes.presets[type] || tag.seatimes.presets.square;
-      var ad = tag.defineSlot(tag.seatimes.unit, options.sizes, id);
-      if (options.sizeMapping) {
-        var map = tag.sizeMapping();
-        for (var width in options.sizeMapping) {
-          map.addSize([width * 1,1], options.sizeMapping[width]);
-        }
-        var mapping = map.build();
-        ad.defineSizeMapping(mapping);
-      }
-      ad.setTargeting("pos", options.position);
-      ad.addService(tag.pubads());
-      tag.enableServices();
-      tag.display(id);
-      div.classList.remove("pending");
-      window.removeEventListener("scroll", debounced);
-      return true;
-    };
-
-    var debounced = function() {
-      if (timeout) return;
-      timeout = setTimeout(function() {
-        intersectionCheck();
-        timeout = null;
-      }, 150);
-    };
-
-    if (!intersectionCheck()) {
-      window.addEventListener("scroll", debounced);
-    }
-
-  });
-
-})();
-  </script>
-</div>
+<!--  Each code can only be used once per page
+<zeus-ad id='zeus_top' width="100%;"></zeus-ad>
+<zeus-ad id='zeus_bottom' width="100%;"></zeus-ad>
+<zeus-ad id='zeus_middle' width="100%;"></zeus-ad>
+<zeus-ad id='zeus_body8a' width="100%;"></zeus-ad>
+<zeus-ad id='zeus_body9a' width="100%;"></zeus-ad>
+<zeus-ad id='zeus_body11a' width="100%;"></zeus-ad>
+<zeus-ad id='zeus_body12a' width="100%;"></zeus-ad>
+<zeus-ad id='zeus_body5a' width="100%;"></zeus-ad>
+<zeus-ad id='zeus_body6a' width="100%;"></zeus-ad>
+<zeus-ad id='zeus_body2a' width="100%;"></zeus-ad>
+-->

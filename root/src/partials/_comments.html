@@ -1,26 +1,24 @@
-<!-- comment block -->
+ <!-- comment block -->
 <script type="text/javascript">
-  window.SEATIMESCO = window.SEATIMESCO || {};
-  window.SEATIMESCO.comments = window.SEATIMESCO.comments || {};
-  window.SEATIMESCO.comments.enabled = 1;
-  window.SEATIMESCO.comments.postID = 'stp-<%= json.project.post_id %>';
-  window.SEATIMESCO.comments.assetURL = '<%= json.project.url %>';
-  window.SEATIMESCO.comments.ssoEnvironment = 'secure.';
-  window.SEATIMESCO.comments.coralURL = 'https://seattletimes.talk.coralproject.net/';
-  window.SEATIMESCO.singleSignOn = window.SEATIMESCO.singleSignOn || {};
-  window.SEATIMESCO.singleSignOn.info = window.SEATIMESCO.singleSignOn.info || {};
-  window.SEATIMESCO.singleSignOn.info.commenterSessionURL = 'https://secure.seattletimes.com/accountcenter/coraltoken.js?token=';
+ window.SEATIMESCO = window.SEATIMESCO || {};
+ window.SEATIMESCO.comments = window.SEATIMESCO.comments || {};
+ window.SEATIMESCO.comments.enabled = 1;
+ window.SEATIMESCO.comments.postID = 'stp-13625054';
+ window.SEATIMESCO.comments.assetURL = 'https://projects.seattletimes.com/2021/collective-longing-after-covid-19-pandemic-seattle-washington';
+ window.SEATIMESCO.comments.ssoEnvironment = 'secure.';
+ window.SEATIMESCO.comments.coralURL = 'https://seattletimes.coral.coralproject.net/';
+ window.SEATIMESCO.singleSignOn = window.SEATIMESCO.singleSignOn || {};
+ window.SEATIMESCO.singleSignOn.info = window.SEATIMESCO.singleSignOn.info || {};
+ window.SEATIMESCO.singleSignOn.info.commenterSessionURL = 'https://secure.seattletimes.com/accountcenter/coraltoken.js?token=';
 </script>
-
 <a id="comments" class="article-comments-bar" href="#comments">
-  <i class="icon-chat"></i> View <span class="comment-count talk_comment_count">Comments</span>
-</a>
-<div class="comments-container">
-  <div class="u-tc mb-4 mt-2 u-sans hide">You must be logged in to leave a comment. <a href="https://secure.seattletimes.com/accountcenter" class="coral-login-link">Log in</a> or <a href="https://secure.seattletimes.com/accountcenter/register" class="coral-create-account-link">create an account</a>.</div>
-  <div id="coral_talk_stream"></div>
-  <p class="u-sans font-small mb-5">The opinions expressed in reader comments are those of the author only, and do not reflect the opinions of The Seattle Times.</p>
-</div>
-<script type="text/javascript" src="https://talk-seattletimes.global.ssl.fastly.net/static/embed/count.js?id=stp-<%= json.project.post_id %>"></script>
-<script type="text/javascript" src="https://talk-seattletimes.global.ssl.fastly.net/static/embed.js"></script>
+             <i class="icon-chat"></i> View <span class="coral-count comment-count talk_comment_count" data-coral-id="stp-13625054">Comments</span>
+           </a><div class="comments-container">
+   <div class="u-tc mb-4 mt-2 u-sans hide">Posting comments is now limited to subscribers only. <a href="https://www.seattletimes.com/subscribe/signup-offers/?subsource=commenting" class="coral-subscribe-link">View subscription offers here</a>. For more information, visit our <a href="https://www.seattletimes.com/help/#commenting-on-articles-on-seattletimes-com" target="_blank">FAQ's</a>.</div>
+   <div id="coral_talk_stream"></div>
+   <p class="u-sans font-tiny mb-5 mt-2">The opinions expressed in reader comments are those of the author only and do not reflect the opinions of The Seattle Times.</p>
+ </div>
+<script type="text/javascript" src="https://seattletimes.coral.coralproject.net/assets/js/count.js" class="coral-script"></script>
+<script type='text/javascript' src='https://seattletimes.coral.coralproject.net/assets/js/embed.js'></script>
 <script type="text/javascript" src="https://www.seattletimes.com/wp-content/plugins/st-coral-talk/dist/st-coraltalk-bundle.js"></script>
 <!-- end comment block -->
