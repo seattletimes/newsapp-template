@@ -10,7 +10,7 @@
   "dependencies": {
     "archieml": "^0.4.2",
     "async": "^2.6.3",
-    "aws-sdk": "^2.2.45",
+    "aws-sdk": "^2.897.0",
     "babel-preset-env": "^1.6.0",
     "babelify": "^7.3.0",
     "browser-pack-flat": "^3.0.5",
@@ -25,7 +25,7 @@
     "grunt": "^1.0.0",
     "grunt-contrib-connect": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "less": "^2.6.1",
+    "less": "^3.1.1",
     "mime": "^1.2.11",
     "resolve": "^1.2.0",
     "shelljs": "^0.6.0",
