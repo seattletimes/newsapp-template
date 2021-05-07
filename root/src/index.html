@@ -2,8 +2,12 @@
 <html lang="en-US">
   <head>
     <%= t.include("partials/_head.html", grunt.data.json) %>
-    <% if (json.project.production && !json.project.embedded) { %>
+    <% if (!json.project.embedded) { %>
       <%= t.include("partials/_dataLayer.html") %>
+      <script src="https://seattle-times.zeustechnology.com/main.js" async></script>
+      <script src="https://www.seattletimes.com/wp-content/plugins/st-advertising/dist/st-projects-bundle.js" async></script>
+    <% } %>
+    <% if (json.project.production && !json.project.embedded) { %>
       <%= t.include("partials/_gtm.html") %>
     <% } %>
     <link rel="stylesheet" type="text/css" href="style.css">

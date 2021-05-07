@@ -23,6 +23,10 @@ body {
   margin: 0;
   //remove 300ms click delay in Safari, AKA still the worst
   touch-action: manipulation;
+
+  @media @darkMode {
+    background-color: @df-off-white;
+  }
 }
 
 main {
@@ -183,43 +187,9 @@ h4 {
   }
 }
 
-.ad {
-  text-align: center;
-  margin: 16px auto;
-
-  &.pending {
-    &::before {
-      display: block;
-      content: "";
-      background: @df-light-gray;
-    }
-
-    &[data-type="banner"],
-    &[data-type="bannerBottom"]{
-      max-width: 728px;
-      &::before {
-        padding-bottom: percentage(90 / 728);
-
-        @media @mobile {
-          padding-bottom: percentage(50 / 300);
-        }
-      }
-    }
-
-    &[data-type="tall"] {
-      max-width: 300px;
-      &::before {
-        padding-bottom: percentage(600 / 300);
-      }
-    }
-
-    &[data-type="square"] {
-      max-width: 300px;
-      &::before {
-        padding-bottom: percentage(250 / 300);
-      }
-    }
-  }
+zeus-ad {
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
 }
 
 .marketing {

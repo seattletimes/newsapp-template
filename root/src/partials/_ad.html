@@ -1,18 +1,5 @@
+<!--  Each code can only be used once per page -->
+<% var adCodes = ["zeus_top", "zeus_bottom", "zeus_middle", "zeus_body8a", "zeus_body9a", "zeus_body11a", "zeus_body12a", "zeus_body5a", "zeus_body6a","zeus_body2a"];
+var chosenAd = adCodes[(number - 1)]; %>
 
-<!-- Add these scripts to your page
-<script src="https://seattle-times.zeustechnology.com/main.js" async></script>
-<script src="https://www.seattletimes.com/wp-content/plugins/st-advertising/dist/st-projects-bundle.js" async></script> -->
-
-
-<!--  Each code can only be used once per page
-<zeus-ad id='zeus_top' width="100%;"></zeus-ad>
-<zeus-ad id='zeus_bottom' width="100%;"></zeus-ad>
-<zeus-ad id='zeus_middle' width="100%;"></zeus-ad>
-<zeus-ad id='zeus_body8a' width="100%;"></zeus-ad>
-<zeus-ad id='zeus_body9a' width="100%;"></zeus-ad>
-<zeus-ad id='zeus_body11a' width="100%;"></zeus-ad>
-<zeus-ad id='zeus_body12a' width="100%;"></zeus-ad>
-<zeus-ad id='zeus_body5a' width="100%;"></zeus-ad>
-<zeus-ad id='zeus_body6a' width="100%;"></zeus-ad>
-<zeus-ad id='zeus_body2a' width="100%;"></zeus-ad>
--->
+<zeus-ad id='<%= chosenAd %>' width="100%;"></zeus-ad>
