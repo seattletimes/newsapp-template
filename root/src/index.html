@@ -16,9 +16,9 @@
     <% if (json.project.production && !json.project.embedded) { %>
       <%= t.include("partials/_gtmNoScript.html") %>
     <% } %>
-    <responsive-child>
+    <side-chain>
       <!-- content goes here -->
-    </responsive-child>
+    </side-chain>
 
     <script src="app.js" async></script>
     <% if (json.project.production) { %>
