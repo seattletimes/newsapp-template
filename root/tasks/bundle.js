@@ -22,9 +22,9 @@ module.exports = function(grunt) {
     async.forEachOf(seeds, function(dest, src, c) {
       var b = browserify({ debug: mode == "dev" });
       b.plugin(require("browser-pack-flat/plugin"));
-      b.transform(babel, { global: true, presets: [
-        ["env", {
-          targets: { browsers: ["ie >= 10", "safari >= 8"]},
+      b.transform("babelify", { global: true, presets: [
+        ["@babel/preset-env", {
+          targets: { browsers: ["ie >= 10", "safari >= 12"]},
           loose: true
         }]
       ]});
