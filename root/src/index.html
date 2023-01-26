@@ -4,7 +4,11 @@
     <%= t.include("partials/_head.html", grunt.data.json) %>
     <% if (!json.project.embedded) { %>
       <%= t.include("partials/_dataLayer.html") %>
-      <script src="https://seattle-times.zeustechnology.com/main.js" async></script>
+      <link rel="preload" href="https://htlbid.com/v3/seattletimes.com/htlbid.css" as="style" />
+      <link rel="preload" href="https://htlbid.com/v3/seattletimes.com/htlbid.js" as="script" />
+      <link rel='stylesheet' tvpe='text/css' href='https://htlbid.com/v3/seattletimes.com/htlbid.css' />
+
+      <script src="https://htlbid.com/v3/seattletimes.com/htlbid.js" class="optanon-category-SN" async></script>
       <script src="https://www.seattletimes.com/wp-content/plugins/st-advertising/dist/st-projects-bundle.js" async></script>
     <% } %>
     <% if (json.project.production && !json.project.embedded) { %>

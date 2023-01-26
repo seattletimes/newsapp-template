@@ -1,5 +1,7 @@
 <!--  Each code can only be used once per page -->
-<% var adCodes = ["zeus_top", "zeus_bottom", "zeus_middle", "zeus_body8a", "zeus_body9a", "zeus_body11a", "zeus_body12a", "zeus_body5a", "zeus_body6a","zeus_body2a"];
-var chosenAd = adCodes[(number - 1)]; %>
+<% const adCodes = ["htlad-top", "htlad-middle", "htlad-bottom", "htlad-body8a", "htlad-body9a", "htlad-body11a", "htlad-body12a", "htlad-body5a", "htlad-body6a","htlad-body2a"];
+const chosenAd = adCodes[(number - 1)]; %>
 
-<zeus-ad id='<%= chosenAd %>' width="100%;"></zeus-ad>
+<% const adSlotName = chosenAd.replace('htlad-', ''); %>
+
+<div class="htlad <%= chosenAd %>" style="width:100%" data-unit="/81279359/seattletimes.com/default" data-targeting="{'pos':['<%= adSlotName %>']}"></div>
